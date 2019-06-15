@@ -1,0 +1,20 @@
+<h1>welcomeeeeeeeee</h1>
+<table>
+<thead>
+<tr>
+  <th>Day</th>
+  <th>things to do</th>
+</tr>
+</thead>
+<tbody>
+<% @plans.each do |p| %>
+  <tr>
+  <td><%= p.day %></td>
+ <td> <%= p.place %></td>
+ 
+</tr>
+   
+  <% end %>
+  </tbody>
+</table>
+  <%= link_to 'New plan', new_plan_path %>
