@@ -1,15 +1,16 @@
 class PlansController < ApplicationController
+  before_action :set_destination 
     before_action :set_plan, only: [:show, :edit, :update, :destroy]
     def index
-        @plan = current_user.plans.new #add new action here
-        @plans = current_user.plans
+         @plan = @destination.plans.new #add new action here
+        @plans = @destination.plans
     end
 
     def show
     end
 
     def new
-        @plan = current_user.plans.new
+      @plan = @destination.plans.new #add new action here
     end
 
     # GET /books/1/edit
@@ -18,20 +19,20 @@ class PlansController < ApplicationController
 
 
     def create
-        @plan = current_user.plans.new(plan_params)
+        @plan = @destination.plans.new(plan_params)
     
         if @plan.save
-            redirect_to plans_path()#some change here        
+            redirect_to destination_plans_path()#some change here        
         else
             render :new
         end
       end
 
       def update
-        @plan = current_user.plans.new(plan_params)
+        @plan = @destination.plans.new(plan_params)
        
         if @plan.update(plan_params)
-          rredirect_to plans_path()
+          rredirect_to destination_plans_path()
         else
           render 'edit'
         end
@@ -42,15 +43,19 @@ class PlansController < ApplicationController
        
         @plan.destroy
     
-        redirect_to plans_path()
+        redirect_to destination_plans_path()
        end
+      
+    def set_destination
+        @destination = Destination.find(params[:destination_id])
+    end
 
     def set_plan
-        @plan = current_user.plans.find(params[:id])
+        @plan = @destination.plans.find(params[:id])
     end
 
     def plan_params
-        params.require(:plan).permit(:place, :day)
+        params.require(:plan).permit(:place, :day, :time)
     end
     
 end

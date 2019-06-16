@@ -1,44 +1,50 @@
 
 <%= form_for @plan, url: {action: "create"} do |form| %>
-  <p>
+    <p>
       <%= form.label :Day %>
       <%= form.text_field :day %>
     </p>
+
+
     <p>
       <%= form.label :Time %>
       <%= form.text_field :time %>
     </p>
+
     <p>
       <%= form.label :place %>
       <%= form.text_field :place %>
 
     </p>
  
-  <p>
+    <p>
     <%= form.submit %>
-  </p>
+    </p>
 <% end %>
 <h1>welcome</h1>
+<h1> <%= @destination.name %></h1>
 
 <table>
 <thead>
 <tr>
   <th>Day</th>
   <th>things to do</th>
+    <th>Time</th>
 </tr>
 </thead>
 <tbody>
-<% @plans.each do |p| %>
+<% @plans.order('day').each do |p| %>
+ 
   <tr>
   <td><%= p.day %></td>
  <td> <%= p.place %></td>
- <td><%= link_to 'Show', p %></td>
+ <td> <%= p.time %></td>
 
- <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ <td><%= link_to 'Destroy', destination_plans_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
  
 </tr>
-   
+  
   <% end %>
   </tbody>
 </table>
-  <%= link_to 'New plan', new_plan_path %>
+  <%= link_to 'New plan', new_destination_plan_path %>
