@@ -1,0 +1,15 @@
+<%= form_for @plan, url: {action: "update"} do |form| %>
+    <p>
+      <%= form.label :place %>
+      <%= form.text_field :place %>
+    </p>
+   
+    <p>
+      <%= form.label :Day %>
+      <%= form.text_field :day %>
+    </p>
+   
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>

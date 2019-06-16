@@ -1,15 +1,27 @@
+
+
+
+<% 2.times do  %>
+ 
 <%= form_for @plan, url: {action: "create"} do |form| %>
+  <p>
+      <%= form.label :Day %>
+      <%= form.text_field :day %>
+    </p>
     <p>
-      <%= form.label :place %><br>
+      <%= form.label :Time %>
+      <%= form.text_field :time %>
+    </p>
+    <p>
+      <%= form.label :place %>
       <%= form.text_field :place %>
+
     </p>
    
-    <p>
-      <%= form.label :text %><br>
-      <%= form.text_area :day %>
-    </p>
+    
    
     <p>
       <%= form.submit %>
     </p>
+  <% end %>
   <% end %>

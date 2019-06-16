@@ -1,4 +1,25 @@
-<h1>welcomeeeeeeeee</h1>
+
+<%= form_for @plan, url: {action: "create"} do |form| %>
+  <p>
+      <%= form.label :Day %>
+      <%= form.text_field :day %>
+    </p>
+    <p>
+      <%= form.label :Time %>
+      <%= form.text_field :time %>
+    </p>
+    <p>
+      <%= form.label :place %>
+      <%= form.text_field :place %>
+
+    </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<h1>welcome</h1>
+
 <table>
 <thead>
 <tr>
@@ -11,6 +32,9 @@
   <tr>
   <td><%= p.day %></td>
  <td> <%= p.place %></td>
+ <td><%= link_to 'Show', p %></td>
+
+ <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
  
 </tr>
    
