@@ -15,19 +15,27 @@
 
   <% if user_signed_in? %>
 
-  <h2>Welcome <%= current_user.email %></h2>
-  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-  <%= link_to 'Change Password', edit_user_registration_path %><br>
-  <%= link_to 'Create your plan', new_destination_path %>
+  
+  <nav class="navbar ">
+  <h4>Welcome <%= current_user.email %></h4>
+  <ul>
+  <li> <%= link_to "Home  ", home_path %> </li>
+  <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+  <li><%= link_to 'Change Password', edit_user_registration_path %></li>
+  
+  </ul>
+  </nav>
 
+ <div class="blockquote text-center"> <%= link_to 'start Create your plan', new_destination_path %> </div>
 <% else %>
-<div class="navbar navbar-light bg-light">
 
+<nav class="navbar ">
 <ul>
- <div class= "btn btn-outline-success"> <%= link_to "Sign Up", new_user_registration_path %></div>
- <div class="btn btn-outline-success"> <%= link_to "Sign In", new_user_session_path %></div>
+<li> <%= link_to "Home  ", home_path %> </li>
+ <li> <%= link_to "Sign Up  ", new_user_registration_path %> </li>
+ <li> <%= link_to "  Sign In", new_user_session_path %></li>
  </ul>
-</div>
+</nav>
 <% end %>
 
     <%= yield %>

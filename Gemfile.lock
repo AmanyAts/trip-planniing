@@ -50,6 +50,7 @@ GEM
     autoprefixer-rails (9.6.0)
       execjs
     bcrypt (3.1.12-x64-mingw32)
+    bcrypt-ruby (3.1.0)
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -213,6 +214,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt-ruby (= 3.1.0)
   bootsnap (>= 1.1.0)
   bootstrap
   byebug
