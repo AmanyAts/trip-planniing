@@ -1,7 +1,12 @@
 <%= form_for @destination, url: {action: "create"} do |form| %>
     <p>
-        <%= form.label :Day %>
+        <%= form.label :Add %>
         <%= form.text_field :name %>
+      </p>
+
+      <p>
+        <%= form.label :Add  %>
+        <%= form.text_field :budget %>
       </p>
       
       

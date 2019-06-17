@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ ul{
+display: flex;
+list-style: none;
+
+}
+
+
+
+@import "bootstrap";
+ @import "destinations";

@@ -2,8 +2,14 @@
 
 
  <% @destinations.each do |p| %>
-    <p><%= link_to p.name, p %></p>
-    
+   <br>
+    <td><%= link_to p.name, p %>|</td>
+    <td><%= link_to 'Edit', edit_destination_path(p) %></td>
+    <td><%= link_to 'Destroy', destination_path(p), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <br>
+
     
 
  <% end %>
+
+

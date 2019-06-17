@@ -40,8 +40,10 @@
  <td> <%= p.place %></td>
  <td> <%= p.time %></td>
 
- <td><%= link_to 'Destroy', destination_plans_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
- 
+ <td><%= link_to 'Show', destination_plan_path(p.destination_id,p) %></td>
+  <td><%= link_to 'Edit', edit_destination_plan_path(p.destination_id,p) %></td>
+ <td><%= link_to 'Destroy', destination_plan_path(p.destination_id,p), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
 </tr>
   
   <% end %>

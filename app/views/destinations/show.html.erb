@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 <p>
- <strong>Day:</strong>
+ <strong>destination:</strong>
  <%= @destination.name %>
 </p>
+
+<p>
+ <strong>Travel-Buget:</strong>
+ <%= @destination.budget %>
+</p>
+<%= link_to 'My plans', destination_plans_path(@destination) %>
+
+
+
+

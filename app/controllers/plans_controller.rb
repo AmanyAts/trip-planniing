@@ -29,22 +29,21 @@ class PlansController < ApplicationController
       end
 
       def update
-        @plan = @destination.plans.new(plan_params)
        
         if @plan.update(plan_params)
-          rredirect_to destination_plans_path()
+          redirect_to destination_plans_path()
         else
           render 'edit'
         end
       end
 
       
-      def destroy
+    def destroy
        
         @plan.destroy
     
         redirect_to destination_plans_path()
-       end
+    end
       
     def set_destination
         @destination = Destination.find(params[:destination_id])

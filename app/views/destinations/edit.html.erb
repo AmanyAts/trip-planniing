@@ -1,0 +1,15 @@
+<%= form_for @destination, url: {action: "update"} do |form| %>
+    <p>
+      <%= form.label :Name %>
+      <%= form.text_field :name %>
+    </p>
+   
+    <p>
+      <%= form.label :budget %>
+      <%= form.text_field :budget %>
+    </p>
+   
+    <p>
+      <%= form.submit "update" %>
+    </p>
+  <% end %>
