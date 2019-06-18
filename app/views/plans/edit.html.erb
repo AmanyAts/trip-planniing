@@ -1,5 +1,5 @@
 
-
+<div class="container">
 <%= form_for @plan, url: {action: "update"} do |form| %>
     <p>
       <%= form.label :place %>
@@ -12,6 +12,7 @@
     </p>
    
     <p>
-      <%= form.submit "update" %>
+      <%= form.submit "update" , :class => 'btn btn-primary'  %>
     </p>
   <% end %>
+  </div>

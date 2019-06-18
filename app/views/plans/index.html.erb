@@ -1,35 +1,13 @@
-
-<%= form_for @plan, url: {action: "create"} do |form| %>
-    <p>
-      <%= form.label :Day %>
-      <%= form.text_field :day %>
-    </p>
-
-
-    <p>
-      <%= form.label :Time %>
-      <%= form.text_field :time %>
-    </p>
-
-    <p>
-      <%= form.label :place %>
-      <%= form.text_field :place %>
-
-    </p>
- 
-    <p>
-    <%= form.submit %>
-    </p>
-<% end %>
-<h1>welcome</h1>
-<h1> <%= @destination.name %></h1>
-
-<table>
+<div class="container">
+<h1> <%= @destination.name %>  </h1>
+<h4>Travel Budget: <%= @destination.budget %></h4>
+<main id="main">
+<table id="tb" class="table table-striped table-dark">
 <thead>
 <tr>
-  <th>Day</th>
-  <th>things to do</th>
-    <th>Time</th>
+  <th scope="col">Day</th>
+  <th scope="col">things to do</th>
+    <th scope="col">Time</th>
 </tr>
 </thead>
 <tbody>
@@ -49,4 +27,30 @@
   <% end %>
   </tbody>
 </table>
-  <%= link_to 'New plan', new_destination_plan_path %>
+  
+
+
+  <%= form_for @plan, url: {action: "create"} do |form| %>
+    <p>
+      <%= form.label :Day %>
+      <%= form.text_field :day %>
+    </p>
+
+
+    <p>
+      <%= form.label :Time %>
+      <%= form.text_field :time %>
+    </p>
+
+    <p>
+      <%= form.label :place %>
+      <%= form.text_field :place %>
+
+    </p>
+ 
+    <p>
+      <%= form.submit %>
+    </p>
+<% end %>
+</main>
+</div>

@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for @destination, url: {action: "update"} do |form| %>
     <p>
       <%= form.label :Name %>
@@ -10,6 +11,7 @@
     </p>
    
     <p>
-      <%= form.submit "update" %>
+      <%= form.submit "update" , :class => 'btn btn-primary'  %>
     </p>
   <% end %>
+  </div>
