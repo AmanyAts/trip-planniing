@@ -33,10 +33,10 @@ list-style: none;
     padding:50px;
 }
 
-.btn{
+// .btn{
 
-    margin-left:30%; 
-}
+//     margin-left:30%; 
+// }
 #tb{
 width: 50%;
 margin-right: 10%;
@@ -70,11 +70,20 @@ margin-left: 2%
     padding: 4%;
     box-shadow: 0 0 5px rgba(0,0,0,.75);
     margin-left:30%;
+    text-align: center;
 }
 .container-fluid{
     font-size: 20px;
 }
-
+.container{
+    width: 33%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 4%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+    margin-left: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 @import "bootstrap";
  @import "destinations";
