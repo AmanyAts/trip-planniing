@@ -12,7 +12,7 @@
 <tr>
   <th scope="col">Day</th>
   <th scope="col">Date & time</th>
-  <th scope="col">things to do</th>
+  <th scope="col">Activities</th>
     <th scope="col">Spending</th>  
   
 
@@ -32,7 +32,7 @@
 
  <td><%= link_to 'Show', destination_plan_path(p.destination_id,p) %></td>
   <td><%= link_to 'Edit', edit_destination_plan_path(p.destination_id,p) %></td>
- <td><%= link_to 'Destroy', destination_plan_path(p.destination_id,p), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ <td><%= link_to 'Delete', destination_plan_path(p.destination_id,p), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 </tr>
   
@@ -57,7 +57,7 @@
     
 
     <p>
-      <%= form.label :place %>
+      <%= form.label :Activity %>
       <%= form.text_field :place %>
 
     </p>
