@@ -1,11 +1,16 @@
+<div class="container">
+ <h2>My plans</h2>
  <% @destinations.each do |p| %>
   
-  <table id="tb1" class="container-fluid table table-hover table-dark">
+  <table id="tb1" class="container-fluid table table-hover ">
   <tbody>
-    <td><%= link_to p.name, destination_plans_path(p) %> | <%= link_to 'Edit', edit_destination_path(p) %> | <%= link_to 'Destroy', destination_path(p), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>- <%= link_to p.name, destination_plans_path(p) %></td> 
+    <td> <%= link_to 'Edit', edit_destination_path(p) %> 
+    </td> <td><%= link_to 'Destroy', destination_path(p), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tbody>
     </table>
 
  <% end %>
+ </div>
 
 

@@ -54,7 +54,7 @@ class PlansController < ApplicationController
     end
 
     def plan_params
-        params.require(:plan).permit(:place, :day, :time)
+        params.require(:plan).permit(:place, :date, :day, :spending)
     end
     
 end

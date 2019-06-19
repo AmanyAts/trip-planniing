@@ -2,18 +2,18 @@
 
 <%= form_for @destination,  url: {action: "create"} do |form| %>
     <p>
-        <%= form.label :Add %>
-        <%= form.text_field :name %>
+        <%= form.label :Destination %>
+         <%= form.text_field :name %>
       </p>
 
       <p>
-        <%= form.label :Add  %>
+        <%= form.label :Budget  %>
         <%= form.text_field :budget %>
       </p>
       
       
      
       <p>
-        <%= form.submit "submit" , :class => 'btn btn-primary' %>
+        <%= form.submit "Start" , :class => 'btn btn-primary' %>
       </p>
     <% end %>

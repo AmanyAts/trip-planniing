@@ -10,36 +10,38 @@
   </head>
 
   <body>
+  <header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
   <% if user_signed_in? %>
 
-  
+
   <nav class="navbar ">
-  <h2>Trip Planner <br><span id="wel">Welcome <%= current_user.email %><span></h2>
-  
+
+  <h1>Trip Planner <br><span id="wel">Welcome <%= current_user.email %><span></h1>
   <ul>
-  <li> <%= link_to "Home  ", home_path %> </li>
-  <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-  <li><%= link_to 'Change Password', edit_user_registration_path %></li>
-  <li><%= link_to 'New trip', new_destination_path %></li>
-  <li><%= link_to 'My trip', destinations_path %></li>
+  <li > <%= link_to "Home  ", home_path %> </li>
+  <li ><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+  <li ><%= link_to 'Change Password', edit_user_registration_path %></li>
+  <li ><%= link_to 'New trip', new_destination_path %></li>
+  <li ><%= link_to 'My plans', destinations_path %></li>
   
   </ul>
   </nav>
 
-# <!--- <div class="blockquote text-center"> <%= link_to 'start Create your plan', new_destination_path %> </div>-->
 <% else %>
 
 <nav class="navbar ">
 <ul>
+<h1>Trip Planner</h1>
 <li> <%= link_to "Home  ", home_path %> </li>
  <li> <%= link_to "Sign Up  ", new_user_registration_path %> </li>
  <li> <%= link_to "Sign In", new_user_session_path %></li>
  </ul>
 </nav>
 <% end %>
+</header>
 
     <%= yield %>
   </body>
